@@ -1,4 +1,3 @@
-import time
 from functions import *
 import socket
 import threading
@@ -10,7 +9,6 @@ class Server:
     host = "127.0.0.1"
     port = 12345
 
-
     def __init__(self):
         server_config = (self.host, self.port)
         self.server.bind(server_config)
@@ -18,8 +16,7 @@ class Server:
         print("\nWaiting for Connection....")
 
         self.clientsocket, self.addr = self.server.accept()
-        print("Get connecting from ", self.addr)
-
+        print("Connecting from ", self.addr)
 
     def receive_sms(self):
         try:

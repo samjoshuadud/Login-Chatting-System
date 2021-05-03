@@ -12,9 +12,9 @@ class SignUp:
         self.password = password
         self.dname = dname
 
-
     def signu(self):
-        c.execute(f'''INSERT INTO info (username, password, name) VALUES ('{self.username}', '{self.password}', '{self.dname}'); ''')
+        c.execute(
+            f'''INSERT INTO info (username, password, name) VALUES ('{self.username}', '{self.password}', '{self.dname}'); ''')
         conn.commit()
 
 
